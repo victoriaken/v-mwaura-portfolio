@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victoria Mwaura | Cybersecurity & Cloud Security Engineer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Theme Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyberDark: '#0a0f1d',
+                        cyberCard: '#111827',
+                        cyberBorder: '#1f2937',
+                        cyberCyan: '#00f2fe',
+                        cyberBlue: '#4facfe',
+                        cyberEmerald: '#10b981',
+                        cyberPurple: '#a855f7'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0f1d;
+            color: #e2e8f0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        .glow-cyan {
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.15);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .code-font {
+            font-family: 'Fira Code', 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-cyan-500 selection:text-black">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-cyberDark/80 border-b border-cyberBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid me-2 fa-shield-halved text-cyan-400 text-xl"></i>
+                <span class="font-bold text-lg text-white tracking-wide">VM<span class="text-cyan-400">.sec</span></span>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+                <a href="#certifications" class="hover:text-cyan-400 transition-colors">Certifications</a>
+                <a href="#skills" class="hover:text-cyan-400 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects & Advisories</a>
+                <a href="#soc-lab" class="hover:text-cyan-400 transition-colors">SOC Lab</a>
+                <a href="#experience" class="hover:text-cyan-400 transition-colors">Experience</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cyberCard border-b border-cyberBorder px-4 pt-2 pb-4 space-y-2 text-sm">
+            <a href="#about" class="block text-gray-300 hover:text-cyan-400 py-1">About</a>
+            <a href="#certifications" class="block text-gray-300 hover:text-cyan-400 py-1">Certifications</a>
+            <a href="#skills" class="block text-gray-300 hover:text-cyan-400 py-1">Skills</a>
+            <a href="#projects" class="block text-gray-300 hover:text-cyan-400 py-1">Projects & Advisories</a>
+            <a href="#soc-lab" class="block text-gray-300 hover:text-cyan-400 py-1">SOC Lab</a>
+            <a href="#experience" class="block text-gray-300 hover:text-cyan-400 py-1">Experience</a>
+            <a href="#contact" class="block text-gray-300 hover:text-cyan-400 py-1">Contact</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="flex-1 space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-cyberCard border border-cyan-500/30 px-3 py-1 rounded-full text-xs text-cyan-400">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Available for SOC & Cloud Security Roles</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
+                    Victoria Mwaura
+                </h1>
+                <h2 class="text-xl sm:text-2xl font-semibold text-gradient">
+                    Cybersecurity & Cloud Security Engineer
+                </h2>
+                <p class="text-gray-400 max-w-2xl leading-relaxed text-sm sm:text-base">
+                    Computer Science graduate specializing in Threat Analysis, Digital Forensics & Incident Response (DFIR), and Cloud Infrastructure Security. Experienced in mapping enterprise systems to the <span class="text-white font-medium">NIST Cybersecurity Framework (CSF 2.0)</span> and engineering agentic security solutions.
+                </p>
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold rounded-lg hover:opacity-90 transition-opacity glow-cyan flex items-center space-x-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Get In Touch</span>
+                    </a>
+                    <a href="#soc-lab" class="px-6 py-3 bg-cyberCard border border-cyberBorder text-gray-200 font-medium rounded-lg hover:border-cyan-500/50 transition-colors flex items-center space-x-2">
+                        <i class="fa-solid fa-terminal text-cyan-400"></i>
+                        <span>Launch Playbooks</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4 pt-4 text-gray-400">
+                    <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Connect:</span>
+                    <a href="https://github.com" target="_blank" class="hover:text-cyan-400 text-lg transition-colors"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="hover:text-cyan-400 text-lg transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:vickieken689@gmail.com" class="hover:text-cyan-400 text-lg transition-colors"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <!-- Terminal Widget -->
+            <div class="w-full md:w-5/12 bg-cyberCard border border-cyberBorder rounded-xl p-4 shadow-2xl code-font text-xs text-gray-300">
+                <div class="flex items-center justify-between pb-3 border-b border-cyberBorder mb-3">
+                    <div class="flex space-x-2">
+                        <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span>
+                    </div>
+                    <span class="text-gray-500">vmwaura@soc-workstation:~</span>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-cyan-400">$ whoami</p>
+                    <p class="text-gray-400">Victoria Mwaura | B.Sc Computer Science</p>
+                    <p class="text-cyan-400">$ cat certifications.json</p>
+                    <p class="text-emerald-400">[ "OCI Certified Foundations Associate", "OCI Certified AI Foundations", "Cisco Networking Basics" ]</p>
+                    <p class="text-cyan-400">$ systemctl status threat-response</p>
+                    <p class="text-gray-300"><span class="text-emerald-400">● active (running)</span> - NIST CSF 2.0 Pipeline Loaded</p>
+                    <p class="text-cyan-400">$ location</p>
+                    <p class="text-gray-400">Nairobi, Kenya [UTC+3]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-16 bg-cyberCard/50 border-y border-cyberBorder">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Industry Certifications</h2>
+                <p class="text-gray-400 text-sm mb-8">Validated credentials in cloud infrastructure, AI foundations, and networking fundamentals.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-cyberCard border border-cyberBorder rounded-xl p-6 hover:border-cyan-500/40 transition-all">
+                        <div class="flex items-center space-x-4">
+                            <div class="p-3 bg-cyan-500/10 text-cyan-400 rounded-lg text-2xl">
+                                <i class="fa-solid fa-cloud"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-base">OCI Certified Foundations Associate</h3>
+                                <p class="text-xs text-gray-400">Oracle Cloud Infrastructure</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cyberCard border border-cyberBorder rounded-xl p-6 hover:border-cyan-500/40 transition-all">
+                        <div class="flex items-center space-x-4">
+                            <div class="p-3 bg-purple-500/10 text-purple-400 rounded-lg text-2xl">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-base">OCI Certified AI Foundations Associate</h3>
+                                <p class="text-xs text-gray-400">Oracle Cloud Infrastructure</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cyberCard border border-cyberBorder rounded-xl p-6 hover:border-cyan-500/40 transition-all">
+                        <div class="flex items-center space-x-4">
+                            <div class="p-3 bg-emerald-500/10 text-emerald-400 rounded-lg text-2xl">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-base">Cisco Networking Basics</h3>
+                                <p class="text-xs text-gray-400">Cisco Networking Academy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Matrix -->
+        <section id="skills" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Technical Skills & Competencies</h2>
+            <p class="text-gray-400 text-sm mb-10">Hands-on capabilities spanning security operations, cloud IAM, software engineering, and analytical tooling.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-cyberCard border border-cyberBorder rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-cyan-400 mb-4 flex items-center">
+                        <i class="fa-solid fa-shield-virus me-2"></i> SOC Analysis & DFIR
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> NIST CSF 2.0 Mapping</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> Threat Analysis & Incident Triage</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> TryHackMe Lab Operations</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> Log Inspection & Malware Basics</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-cyberCard border border-cyberBorder rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-cyan-400 mb-4 flex items-center">
+                        <i class="fa-solid fa-cloud-lock me-2"></i> Cloud & Network Security
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> Identity & Access Management (IAM)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> Cisco Router/Switch Configuration</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> Network Infrastructure Maintenance</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> Microsoft 365 Security Admin</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-cyberCard border border-cyberBorder rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-cyan-400 mb-4 flex items-center">
+                        <i class="fa-solid fa-robot me-2"></i> AI Security & Automation
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> CrewAI & Multi-Agent Systems</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> Google Agent Development Kit (ADK)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> Groq API & LLM Guardrails</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> Automated Log Parsing Scripts</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-cyberCard border border-cyberBorder rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-cyan-400 mb-4 flex items-center">
+                        <i class="fa-solid fa-code me-2"></i> Languages & Development
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> Python & Linux Shell Scripts</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> Node.js & REST APIs</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> Java, C, JavaScript</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> SQL & MySQL Database Management</li>
+                    </ul>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-cyberCard border border-cyberBorder rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-cyan-400 mb-4 flex items-center">
+                        <i class="fa-solid fa-chart-line me-2"></i> Data Analytics & SIEM
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> Oracle Analytics Desktop</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> ACLED Conflict Data Modeling</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> Streamlit Data Visualizations</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> Telemetry & Metrics Auditing</li>
+                    </ul>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-cyberCard border border-cyberBorder rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-cyan-400 mb-4 flex items-center">
+                        <i class="fa-solid fa-screwdriver-wrench me-2"></i> Tools & Workflows
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> VS Code, Git & GitHub</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> PowerShell & Git Bash</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> MySQL Workbench</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-xs me-2"></i> Vercel Deployment Workflows</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Security Projects & Advisories -->
+        <section id="projects" class="py-16 bg-cyberCard/30 border-t border-cyberBorder">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Featured Projects & Security Advisories</h2>
+                <p class="text-gray-400 text-sm mb-8">Selected works across threat mitigation, web application security hardening, and AI security architecture.</p>
+
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap gap-2 mb-8" id="project-filters">
+                    <button class="px-4 py-2 bg-cyan-500 text-slate-950 text-xs font-bold rounded-lg filter-btn active" data-filter="all">All Projects</button>
+                    <button class="px-4 py-2 bg-cyberCard border border-cyberBorder text-gray-300 text-xs font-medium rounded-lg hover:border-cyan-500/50 filter-btn" data-filter="advisories">Security Advisories</button>
+                    <button class="px-4 py-2 bg-cyberCard border border-cyberBorder text-gray-300 text-xs font-medium rounded-lg hover:border-cyan-500/50 filter-btn" data-filter="cloud">Cloud & IAM</button>
+                    <button class="px-4 py-2 bg-cyberCard border border-cyberBorder text-gray-300 text-xs font-medium rounded-lg hover:border-cyan-500/50 filter-btn" data-filter="ai">Multi-Agent AI</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+                    
+                    <!-- Project 1 -->
+                    <div class="bg-cyberCard border border-cyberBorder rounded-xl overflow-hidden p-6 flex flex-col justify-between project-card" data-category="ai">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <span class="px-2.5 py-1 bg-purple-500/10 text-purple-400 text-xs font-semibold rounded-md border border-purple-500/20">Multi-Agent AI</span>
+                                <span class="text-xs text-gray-500 code-font">July 2026</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Multi-Agent AI Customer Support Safeguards</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">
+                                Prototype built using Python, Google ADK, and Gemini API featuring prompt injection guardrails, sanitized response filters, and robust API keys IAM handling.
+                            </p>
+                        </div>
+                        <button onclick="openModal('ai-support')" class="text-cyan-400 hover:text-cyan-300 text-xs font-semibold flex items-center space-x-1">
+                            <span>View Security Details</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-cyberCard border border-cyberBorder rounded-xl overflow-hidden p-6 flex flex-col justify-between project-card" data-category="cloud">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <span class="px-2.5 py-1 bg-cyan-500/10 text-cyan-400 text-xs font-semibold rounded-md border border-cyan-500/20">Cloud & IAM</span>
+                                <span class="text-xs text-gray-500 code-font">July 2026</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Church Management System (CMS) Security Audit</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">
+                                Full-stack 3-tier Node.js, HTML, and MySQL architecture hardened against SQL Injection, parameterized queries enforcement, and RBAC authentication implementation.
+                            </p>
+                        </div>
+                        <button onclick="openModal('cms-audit')" class="text-cyan-400 hover:text-cyan-300 text-xs font-semibold flex items-center space-x-1">
+                            <span>View Security Details</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-cyberCard border border-cyberBorder rounded-xl overflow-hidden p-6 flex flex-col justify-between project-card" data-category="advisories">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <span class="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-semibold rounded-md border border-emerald-500/20">Security Advisory</span>
+                                <span class="text-xs text-gray-500 code-font">Oct 2026</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">NIST CSF 2.0 Mapping Advisory for SME Infrastructure</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">
+                                Comprehensive advisory detailing actionable security controls across Identify, Protect, Detect, Respond, and Recover functions tailored for growing enterprises.
+                            </p>
+                        </div>
+                        <button onclick="openModal('nist-advisory')" class="text-cyan-400 hover:text-cyan-300 text-xs font-semibold flex items-center space-x-1">
+                            <span>View Security Details</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive SOC Playbook Playground -->
+        <section id="soc-lab" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <div class="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full text-xs text-emerald-400 mb-2">
+                    <i class="fa-solid fa-flask"></i>
+                    <span>Interactive SOC Lab Simulator</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">Incident Response Playbook Playground</h2>
+                <p class="text-gray-400 text-sm">Select an incident vector to simulate triage workflows and inspect recommended remediation commands.</p>
+            </div>
+
+            <div class="bg-cyberCard border border-cyberBorder rounded-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+                <!-- Controls Sidebar -->
+                <div class="lg:col-span-4 p-6 border-b lg:border-b-0 lg:border-r border-cyberBorder space-y-4">
+                    <h3 class="text-xs uppercase tracking-wider font-semibold text-gray-400">Select Threat Scenario</h3>
+                    
+                    <button onclick="loadScenario('phishing')" id="btn-phishing" class="w-full text-left p-3 rounded-lg border border-cyan-500/40 bg-cyan-500/10 text-white font-medium text-sm flex items-center justify-between scenario-btn">
+                        <span><i class="fa-solid fa-fish text-cyan-400 me-2"></i> Credential Phishing Triage</span>
+                        <i class="fa-solid fa-chevron-right text-xs text-cyan-400"></i>
+                    </button>
+
+                    <button onclick="loadScenario('iam')" id="btn-iam" class="w-full text-left p-3 rounded-lg border border-cyberBorder hover:border-gray-700 bg-cyberDark text-gray-300 font-medium text-sm flex items-center justify-between scenario-btn">
+                        <span><i class="fa-solid fa-user-shield text-purple-400 me-2"></i> Unauthorized IAM Access Abuse</span>
+                        <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
+                    </button>
+
+                    <button onclick="loadScenario('sqli')" id="btn-sqli" class="w-full text-left p-3 rounded-lg border border-cyberBorder hover:border-gray-700 bg-cyberDark text-gray-300 font-medium text-sm flex items-center justify-between scenario-btn">
+                        <span><i class="fa-solid fa-database text-emerald-400 me-2"></i> Web Application SQL Injection</span>
+                        <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
+                    </button>
+                </div>
+
+                <!-- Interactive Display -->
+                <div class="lg:col-span-8 p-6 space-y-4">
+                    <div class="flex justify-between items-center pb-3 border-b border-cyberBorder">
+                        <h4 id="scenario-title" class="font-bold text-white text-base">Credential Phishing Triage Playbook</h4>
+                        <span id="scenario-badge" class="px-2.5 py-0.5 rounded text-xs font-semibold bg-cyan-500/20 text-cyan-400">NIST RESPOND</span>
+                    </div>
+
+                    <div>
+                        <h5 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Step-by-Step Incident Workflow</h5>
+                        <ol id="scenario-steps" class="list-decimal list-inside space-y-1 text-sm text-gray-300">
+                            <li>Isolate affected user workstation from network segment.</li>
+                            <li>Revoke active OAuth & M365 session tokens via Azure AD / IAM console.</li>
+                            <li>Inspect mail transfer logs (MTA) for outbound beaconing or secondary link distribution.</li>
+                            <li>Force password reset & require FIDO2/MFA re-enrollment.</li>
+                        </ol>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <h5 class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Mitigation Code Snippet</h5>
+                            <button onclick="copySnippet()" class="text-xs text-cyan-400 hover:text-cyan-300"><i class="fa-solid fa-copy me-1"></i>Copy Snippet</button>
+                        </div>
+                        <pre class="bg-cyberDark p-4 rounded-lg border border-cyberBorder code-font text-xs text-emerald-400 overflow-x-auto"><code id="scenario-code"># Revoke active user sessions in Microsoft Graph PowerShell
+Revoke-MgUserSignInSession -UserId "user@company.com"
+Write-Output "[+] User sessions invalidated successfully."</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Attachment & Work Experience -->
+        <section id="experience" class="py-16 bg-cyberCard/40 border-t border-cyberBorder">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Professional & Attachment Experience</h2>
+                <p class="text-gray-400 text-sm mb-10">Hands-on experience in public and private technology infrastructure environments.</p>
+
+                <div class="space-y-8 border-l-2 border-cyberBorder pl-6 ml-2">
+                    <!-- Item 1 -->
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-cyan-400 border-4 border-cyberDark"></span>
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+                            <h3 class="text-lg font-bold text-white">IT & AI Infrastructure Industrial Attachment</h3>
+                            <span class="text-xs code-font text-cyan-400">May 2026 – Aug 2026</span>
+                        </div>
+                        <h4 class="text-sm font-semibold text-gray-400 mb-2">Next Technologies Limited (Kilimani, Nairobi)</h4>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">
+                            <li>Engaged in cloud infrastructure management, telemetry data analytics, and multi-agent AI development.</li>
+                            <li>Assisted in optimizing data pipelines and applying cloud security configurations across internal workflows.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-cyberBorder border-4 border-cyberDark"></span>
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+                            <h3 class="text-lg font-bold text-white">Network Infrastructure Industrial Attachment</h3>
+                            <span class="text-xs code-font text-gray-400">Apr 2023 – Aug 2023</span>
+                        </div>
+                        <h4 class="text-sm font-semibold text-gray-400 mb-2">State Department of Public Works (Ministry of Roads & Transport)</h4>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">
+                            <li>Supported router configuration, workstation troubleshooting, server room hardware maintenance, and Microsoft 365 endpoint management.</li>
+                            <li>Performed primary diagnostics on local area network (LAN) cabling and patch panel routing.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5 space-y-6">
+                    <h2 class="text-3xl font-bold text-white">Let's Connect</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        I am open to SOC Analyst roles, Cloud Security Engineering opportunities, and cybersecurity advisory projects. Feel free to reach out via email or phone.
+                    </p>
+                    
+                    <div class="space-y-4 text-sm text-gray-300">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-envelope text-cyan-400 text-lg w-5"></i>
+                            <a href="mailto:vickieken689@gmail.com" class="hover:text-cyan-400 transition-colors">vickieken689@gmail.com</a>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone text-cyan-400 text-lg w-5"></i>
+                            <span>+254 740 793 203</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-location-dot text-cyan-400 text-lg w-5"></i>
+                            <span>Nairobi, Kenya</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button onclick="downloadResume()" class="px-5 py-2.5 bg-cyberCard border border-cyberBorder hover:border-cyan-500/50 text-white font-medium rounded-lg text-sm flex items-center space-x-2 transition-colors">
+                            <i class="fa-solid fa-download text-cyan-400"></i>
+                            <span>Download Full Resume (PDF)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-cyberCard border border-cyberBorder rounded-xl p-6 sm:p-8">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Your Name</label>
+                                <input type="text" required class="w-full bg-cyberDark border border-cyberBorder rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Your Email</label>
+                                <input type="email" required class="w-full bg-cyberDark border border-cyberBorder rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Subject</label>
+                            <input type="text" required class="w-full bg-cyberDark border border-cyberBorder rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Message</label>
+                            <textarea rows="4" required class="w-full bg-cyberDark border border-cyberBorder rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold rounded-lg hover:opacity-90 transition-opacity">
+                            Send Security Inquiry
+                        </button>
+                    </form>
+                    <div id="form-toast" class="hidden mt-4 p-3 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs rounded-lg text-center">
+                        Message sent successfully! I will get back to you shortly.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-cyberCard border border-cyberBorder rounded-xl max-w-2xl w-full p-6 space-y-4">
+            <div class="flex justify-between items-center border-b border-cyberBorder pb-3">
+                <h3 id="modal-title" class="text-xl font-bold text-white">Project Detail</h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-white text-lg"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="modal-content" class="text-sm text-gray-300 space-y-3">
+                <!-- Dynamic Content inserted via JS -->
+            </div>
+            <div class="flex justify-end pt-2">
+                <button onclick="closeModal()" class="px-4 py-2 bg-cyberDark border border-cyberBorder text-gray-300 text-xs font-semibold rounded-lg hover:text-white">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-cyberBorder py-6 text-center text-xs text-gray-500">
+        <p>&copy; 2026 Victoria Mwaura. All rights reserved. Built for security engineering & SOC applications.</p>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile Navigation Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Project Filters
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-cyan-500', 'text-slate-950', 'font-bold');
+                    b.classList.add('bg-cyberCard', 'text-gray-300', 'font-medium');
+                });
+                btn.classList.remove('bg-cyberCard', 'text-gray-300', 'font-medium');
+                btn.classList.add('bg-cyan-500', 'text-slate-950', 'font-bold');
+
+                const filter = btn.getAttribute('data-filter');
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Interactive SOC Playbook Scenarios
+        const scenarios = {
+            phishing: {
+                title: "Credential Phishing Triage Playbook",
+                badge: "NIST RESPOND",
+                steps: [
+                    "Isolate affected user workstation from network segment.",
+                    "Revoke active OAuth & M365 session tokens via Azure AD / IAM console.",
+                    "Inspect mail transfer logs (MTA) for outbound beaconing or secondary link distribution.",
+                    "Force password reset & require FIDO2/MFA re-enrollment."
+                ],
+                code: `# Revoke active user sessions in Microsoft Graph PowerShell\nRevoke-MgUserSignInSession -UserId "user@company.com"\nWrite-Output "[+] User sessions invalidated successfully."`
+            },
+            iam: {
+                title: "Unauthorized IAM Access Abuse Playbook",
+                badge: "NIST PROTECT",
+                steps: [
+                    "Identify anomaly via CloudTrail / Audit trail logs (unexpected privilege escalation).",
+                    "Temporarily attach explicit DENY policy to compromised Service Principal / IAM User.",
+                    "Rotate all active API access keys and secret tokens immediately.",
+                    "Audit past 72-hour API call history for data exfiltration indicators."
+                ],
+                code: `# Apply inline Deny-All policy in Oracle OCI / AWS IAM CLI\naws iam put-user-policy --user-name SuspectUser --policy-name QuarantinePolicy --policy-document file://deny-all.json`
+            },
+            sqli: {
+                title: "Web Application SQL Injection Playbook",
+                badge: "NIST DETECT & RECOVER",
+                steps: [
+                    "Block malicious source IP address at the Web Application Firewall (WAF) layer.",
+                    "Inspect database query logs for unauthorized UNION SELECT / DROP TABLE syntax.",
+                    "Patch vulnerable code endpoint by implementing parameterized queries / ORM prepared statements.",
+                    "Verify database table integrity against latest backup checksums."
+                ],
+                code: `// Express.js / Node.js Secure Parameterized Query\nconst query = 'SELECT id, email FROM users WHERE username = ? AND status = ?';\ndb.query(query, [userInput, 'active'], (err, results) => { /* ... */ });`
+            }
+        };
+
+        function loadScenario(type) {
+            const sc = scenarios[type];
+            document.getElementById('scenario-title').innerText = sc.title;
+            document.getElementById('scenario-badge').innerText = sc.badge;
+            document.getElementById('scenario-code').innerText = sc.code;
+
+            const stepsList = document.getElementById('scenario-steps');
+            stepsList.innerHTML = sc.steps.map(step => `<li>${step}</li>`).join('');
+
+            // Highlight active button
+            document.querySelectorAll('.scenario-btn').forEach(btn => {
+                btn.className = "w-full text-left p-3 rounded-lg border border-cyberBorder hover:border-gray-700 bg-cyberDark text-gray-300 font-medium text-sm flex items-center justify-between scenario-btn";
+            });
+            const activeBtn = document.getElementById(`btn-${type}`);
+            activeBtn.className = "w-full text-left p-3 rounded-lg border border-cyan-500/40 bg-cyan-500/10 text-white font-medium text-sm flex items-center justify-between scenario-btn";
+        }
+
+        function copySnippet() {
+            const codeText = document.getElementById('scenario-code').innerText;
+            navigator.clipboard.writeText(codeText);
+            alert("Code snippet copied to clipboard!");
+        }
+
+        // Modal Functionality
+        const modal = document.getElementById('project-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+
+        const modalDetails = {
+            'ai-support': {
+                title: "Multi-Agent AI Customer Support Safeguards",
+                content: `
+                    <p><strong>Architecture:</strong> Built using Python, Google Agent Development Kit (ADK), and Gemini API.</p>
+                    <p><strong>Security Focus:</strong> Implemented agent-level system prompts to mitigate direct and indirect prompt injection attacks. Standardized session management and environment variable controls to ensure zero exposure of private API credentials.</p>
+                    <p><strong>Key Takeaway:</strong> Demonstrates practical implementation of secure development lifecycles for generative AI and agentic workflows.</p>
+                `
+            },
+            'cms-audit': {
+                title: "Church Management System (CMS) Security Audit",
+                content: `
+                    <p><strong>Stack:</strong> 3-tier Node.js backend, HTML/JS frontend, MySQL database.</p>
+                    <p><strong>Security Mitigations:</strong> Refactored raw SQL queries to prepared parameterized queries, eliminating SQL Injection vulnerabilities. Enforced bcrypt password hashing and Role-Based Access Control (RBAC) to restrict admin endpoints.</p>
+                `
+            },
+            'nist-advisory': {
+                title: "NIST CSF 2.0 Mapping Advisory",
+                content: `
+                    <p><strong>Scope:</strong> Structured security framework designed for mid-sized enterprise IT environments.</p>
+                    <p><strong>Core Outcomes:</strong> Mapped daily operational tasks to IDENTIFY, PROTECT, DETECT, RESPOND, and RECOVER functions. Provides a clear roadmap for log centralization, access control, and incident response readiness.</p>
+                `
+            }
+        };
+
+        function openModal(id) {
+            const detail = modalDetails[id];
+            if (detail) {
+                modalTitle.innerText = detail.title;
+                modalContent.innerHTML = detail.content;
+                modal.classList.remove('hidden');
+            }
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+
+        // Form Handling Simulation
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const toast = document.getElementById('form-toast');
+            toast.classList.remove('hidden');
+            e.target.reset();
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+        }
+
+        function downloadResume() {
+            alert("Downloading Victoria Mwaura - Cybersecurity Resume...");
+        }
+        function downloadResume() {
+    const link = document.createElement('a');
+    link.href = 'Resume.pdf';
+    link.download = 'Mwaura_Victoria_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+    </script>
+</body>
+</html>
